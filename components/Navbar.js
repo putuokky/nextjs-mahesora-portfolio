@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 
@@ -6,6 +7,7 @@ export default function Navbar() {
   const [nav, setNav] = useState(false)
   const [color, setColor] = useState('transparent')
   const [textColor, setTextColor] = useState('white')
+  const router = useRouter()
 
   const handleNav = () => {
     setNav(!nav)
@@ -24,11 +26,11 @@ export default function Navbar() {
     window.addEventListener('scroll', changeColor)
   }, [])
 
-  const navs = [
+  const menus = [
     { text: 'Home', href: '/' },
-    { text: 'About', href: '/' },
-    { text: 'Skill', href: '/' },
-    { text: 'Contact', href: '/' },
+    { text: 'About', href: '/about' },
+    { text: 'Skills', href: '/skill' },
+    { text: 'Contacts', href: '/contact' },
   ];
 
   return (
@@ -38,9 +40,9 @@ export default function Navbar() {
           <h1 style={{ color: `${textColor}` }} className='text-4xl font-bold uppercase'>Mahesora</h1>
         </Link>
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
-          {navs.map(nav => (
-            <li key={nav.text} className='p-4 font-semibold uppercase hover:underline-offset-8 hover:decoration-2 hover:underline hover:decoration-primary'>
-              <Link href={nav.href}>{nav.text}</Link>
+          {menus.map(menu => (
+            <li key={menu.text} className={`p-4 font-semibold uppercase hover:underline-offset-8 hover:decoration-2 hover:underline hover:decoration-primary ${router.pathname == menu.href ? 'active' : ''}`}>
+              <Link href={menu.href}>{menu.text}</Link>
             </li>
           ))}
         </ul>
@@ -51,14 +53,14 @@ export default function Navbar() {
         </div>
         <div className={`absolute top-0 bottom-0 ${nav ? 'left-0' : 'left-[100%]'} right-0 flex items-center justify-center w-full h-screen text-center duration-300 ease-in bg-black text-white sm:hidden`}>
           <ul>
-            {navs.map(nav => (
-              <li key={nav.text} className='p-4 font-semibold uppercase hover:underline-offset-8 hover:decoration-2 hover:underline hover:decoration-primary'>
-                <Link href={nav.href}>{nav.text}</Link>
+            {menus.map(menu => (
+              <li key={menu.text} className={`p-4 font-semibold uppercase hover:underline-offset-8 hover:decoration-2 hover:underline hover:decoration-primary ${router.pathname == menu.href ? 'active' : ''}`}>
+                <Link href={menu.href}>{menu.text}</Link>
               </li>
             ))}
           </ul>
         </div>
       </div>
-    </nav >
+    </nav>
   )
 }
