@@ -1,3 +1,4 @@
+import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import Project from '@/components/Project'
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <Hero hai='Hello, My name is' heading='Okky Maheswara' message='Developers' />
       <Project />
+      <CTA />
       <Footer />
     </>
   )
