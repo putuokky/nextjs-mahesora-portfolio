@@ -37,7 +37,7 @@ export default function Navbar() {
     <nav style={{ backgroundColor: `${color}` }} className='fixed top-0 left-0 z-10 w-full duration-300 ease-in'>
       <div className='flex items-center justify-between p-4 m-auto text-white'>
         <Link href='/'>
-          <h1 style={{ color: `${textColor}` }} className='text-4xl font-bold uppercase'>Mahesora</h1>
+          <h1 style={{ color: `${textColor}` }} className='text-xl font-bold uppercase md:text-2xl xl:text-4xl'>Mahesora</h1>
         </Link>
         <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
           {menus.map(menu => (

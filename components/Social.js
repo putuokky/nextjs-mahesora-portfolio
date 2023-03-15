@@ -15,7 +15,7 @@ export default function Social({ className }) {
     <>
       {socials.map(social => (
         <Link key={social.id} href={social.href} target='_blank'>
-          <span className={`flex p-6 mx-3 duration-300 ease-in rounded-full shadow-lg cursor-pointer bg-sixth hover:scale-110 hover:bg-primary ${className}`}>
+          <span className={`duration-300 ease-in shadow-lg cursor-pointer xl:text-lg ${className}`}>
             {social.icon}
           </span>
         </Link>

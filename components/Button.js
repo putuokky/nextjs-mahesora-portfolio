@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Button({ className, text, href }) {
   return (
-    <button className={`bottom-0 flex px-6 py-3 font-bold text-white uppercase duration-300 ease-in rounded-lg bg-fiveth hover:bg-secondary ${className}`}>
+    <button className={`flex px-6 py-3 font-bold text-white uppercase duration-300 ease-in rounded-lg bg-fiveth hover:bg-secondary ${className}`}>
       <Link href={href}>{text}</Link>
     </button>
   )
