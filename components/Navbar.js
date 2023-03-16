@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import Button from './Button'
 
 export default function Navbar() {
   const [nav, setNav] = useState(false)
@@ -29,8 +30,8 @@ export default function Navbar() {
   const menus = [
     { text: 'Home', href: '/' },
     { text: 'About', href: '/about' },
-    { text: 'Skills', href: '/skill' },
-    { text: 'Contacts', href: '/contact' },
+    { text: 'Project', href: '/project' },
+    { text: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -46,6 +47,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+        <Button className={`text-sm hidden md:flex`} href='#' text={`Hire Me`} />
 
         {/* Mobile Button */}
         <div onClick={handleNav} className='z-10 block sm:hidden'>
