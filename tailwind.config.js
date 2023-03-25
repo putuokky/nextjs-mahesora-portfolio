@@ -11,16 +11,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'white': '#FFFFFF',
-        'black': '#000000',
-        'primary': '#E65616',
-        'secondary': '#D1310A',
-        'third': '#898989',
-        'fourth': '#FFFFFF',
-        'fiveth': '#303030',
-        'sixth': '#292929',
-        'seventh': '#1A1A1A',
-        'eighth': '#1F1F1F',
+        'primary': '#CB602C',
+        'secondary': '#B24510',
+        'third': '#6A615D',
+        'fourth': '#2C1E18',
+        'fiveth': '#F2EFE7',
+        'sixth': '#362720',
       },
     },
   },

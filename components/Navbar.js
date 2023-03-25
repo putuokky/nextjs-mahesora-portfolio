@@ -18,7 +18,7 @@ export default function Navbar() {
     const changeColor = () => {
       if (window.scrollY >= 90) {
         setColor('#ffffff')
-        setTextColor('#D1310A')
+        setTextColor('#CB602C')
       } else {
         setColor('transparent')
         setTextColor('#ffffff')
@@ -30,13 +30,14 @@ export default function Navbar() {
   const menus = [
     { text: 'Home', href: '/' },
     { text: 'About', href: '/about' },
+    { text: 'Skill', href: '/skill' },
     { text: 'Project', href: '/project' },
     { text: 'Contact', href: '/contact' },
   ];
 
   return (
     <nav style={{ backgroundColor: `${color}` }} className='fixed top-0 left-0 z-10 w-full duration-300 ease-in'>
-      <div className='flex items-center justify-between p-4 m-auto text-white'>
+      <div className='container flex items-center justify-between py-4 mx-auto text-white'>
         <Link href='/'>
           <h1 style={{ color: `${textColor}` }} className='text-xl font-bold uppercase md:text-2xl xl:text-4xl'>Mahesora</h1>
         </Link>
@@ -47,7 +48,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <Button className={`text-sm hidden md:flex`} href='#' text={`Hire Me`} />
 
         {/* Mobile Button */}
         <div onClick={handleNav} className='z-10 block sm:hidden'>
