@@ -37,7 +37,7 @@ export default function Navbar() {
 
   return (
     <nav style={{ backgroundColor: `${color}` }} className='fixed top-0 left-0 z-10 w-full duration-300 ease-in'>
-      <div className='container flex items-center justify-between py-4 mx-auto text-white'>
+      <div className='container flex items-center justify-between px-4 py-4 mx-auto text-white md:px-0'>
         <Link href='/'>
           <h1 style={{ color: `${textColor}` }} className='text-xl font-bold uppercase md:text-2xl xl:text-4xl'>Mahesora</h1>
         </Link>
